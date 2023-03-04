@@ -31,7 +31,7 @@ jobs:
         with:
           context: 'containers/bind'
           platforms: linux/amd64, linux/arm64 
-          push: ${{ github.branch == 'main' && github.event_name != 'pull_request' }}
+          push: ${{ github.ref_name == 'main' && github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/remkio/homelab-bind:9.18.11-r0
             ghcr.io/remkio/homelab-bind:9.18
