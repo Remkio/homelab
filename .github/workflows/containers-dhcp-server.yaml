@@ -1,11 +1,12 @@
+---
 name: Containers DHCP Server CI
 
 on:
   push:
-    paths: ['containers/dhcp-server/**']
+    paths: ["containers/dhcp-server/**"]
   pull_request:
-    branches: [ "main" ]
-    paths: ['containers/dhcp-server/**']
+    branches: ["main"]
+    paths: ["containers/dhcp-server/**"]
 
 jobs:
   build:
@@ -30,8 +31,9 @@ jobs:
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: 'containers/dhcp-server'
-          platforms: linux/amd64, linux/arm64 
-          push: ${{ github.ref_name == 'main' && github.event_name != 'pull_request' }}
+          platforms: linux/amd64, linux/arm64
+          push: ${{ github.ref_name == 'main' && \
+                    github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/remkio/dhcp-server:4.4.3_p1-r1
             ghcr.io/remkio/dhcp-server:4.4

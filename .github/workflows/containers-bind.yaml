@@ -1,11 +1,12 @@
+---
 name: Containers Bind CI
 
 on:
   push:
-    paths: ['containers/bind/**']
+    paths: ["containers/bind/**"]
   pull_request:
-    branches: [ "main" ]
-    paths: ['containers/bind/**']
+    branches: ["main"]
+    paths: ["containers/bind/**"]
 
 jobs:
   build:
@@ -30,8 +31,9 @@ jobs:
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: 'containers/bind'
-          platforms: linux/amd64, linux/arm64 
-          push: ${{ github.ref_name == 'main' && github.event_name != 'pull_request' }}
+          platforms: linux/amd64, linux/arm64
+          push: ${{ github.ref_name == 'main' && \
+                    github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/remkio/homelab-bind:9.18.11-r0
             ghcr.io/remkio/homelab-bind:9.18
