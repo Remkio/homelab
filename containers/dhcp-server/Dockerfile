@@ -12,8 +12,8 @@ RUN apk --no-cache --update add \
     dhcp-server-vanilla=${DHCP_VERSION} \
     && touch /var/lib/dhcp/dhcpd.leases
 
+VOLUME /var/lib/dhcp /etc/dhcp
+
+EXPOSE 67/udp
 
 CMD ["/usr/sbin/dhcpd", "-4", "-f", "-d", "--no-pid", "-cf", "/etc/dhcp/dhcpd.conf"]
-
-
-
