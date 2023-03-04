@@ -4,9 +4,9 @@ ARG BIND_VERSION=9.18.11-r0
 
 LABEL \
     org.opencontainers.image.title="homelab-bind" \
-    org.opencontainers.image.description="Bind image for homelab use" \
+    org.opencontainers.image.description="Alpine Bind Container" \
     org.opencontainers.image.source="https://github.com/Remkio/homelab/containers/bind" \
-    org.opencontainers.image.version="9.18.11-r0"
+    org.opencontainers.image.version="${BIND_VERSION}"
 
 RUN apk --no-cache --update add \
     bind=${BIND_VERSION} \
