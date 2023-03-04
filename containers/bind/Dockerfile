@@ -6,7 +6,7 @@ LABEL \
     org.opencontainers.image.title="homelab-bind" \
     org.opencontainers.image.description="Alpine Bind Container" \
     org.opencontainers.image.source="https://github.com/Remkio/homelab/containers/bind" \
-    org.opencontainers.image.version="${BIND_VERSION}"
+    org.opencontainers.image.version=${BIND_VERSION}
 
 RUN apk --no-cache --update add \
     bind=${BIND_VERSION} \
