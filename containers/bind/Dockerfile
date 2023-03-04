@@ -13,10 +13,8 @@ RUN apk --no-cache --update add \
     bind-tools=${BIND_VERSION} \
     bind-dnssec-tools=${BIND_VERSION}
 
-VOLUME /var/named /etc/bind
+VOLUME /var/lib/bind /etc/bind /var/cache/bind
 
 EXPOSE 53/tcp 53/udp
 
 CMD ["named", "-c", "/etc/bind/named.conf", "-g", "-u", "named"]
-
-
