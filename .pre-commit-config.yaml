@@ -22,7 +22,7 @@ repos:
     hooks:
       - id: k8svalidate
         files: .yaml$
-  - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.2.0
+  - repo: https://github.com/onedr0p/sops-pre-commit
+    rev: v2.1.0
     hooks:
-      - id: detect-secrets
+      - id: forbid-secrets

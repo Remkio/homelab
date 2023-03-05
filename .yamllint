@@ -1,3 +1,7 @@
 ---
 
 extends: default
+
+rules:
+    line-length:
+        allow-non-breakable-inline-mappings: true

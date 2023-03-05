@@ -3,5 +3,5 @@ creation_rules:
     encrypted_regex: ^(data|stringData)$
     key_groups:
       - age:
-        - age1jmnk6eyeyxv4uvvlf35kra3fugznljt5fe0wrr0aje8c4g9p5p8smju584
-        - age1ckvgn9gr3n46t20m5hp603ktj4l88fjc38yml69fq4fagt6t658s68usnp
+          - age1jmnk6eyeyxv4uvvlf35kra3fugznljt5fe0wrr0aje8c4g9p5p8smju584
+          - age1l5f36mt6trytuntuv2txjwrvspvu8k5z99rfc5q59759qqadm58qss2tfs
