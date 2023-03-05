@@ -1,0 +1,10 @@
+resources:
+  - ../../base/namespace.flux-system.yaml
+  - ../../base/flux-system
+  - kustomization.infrastructure.yaml
+  - kustomization.cluster.yaml
+
+configMapGenerator:
+- name: flux-config
+  literals:
+    - cluster-domain: "cluster.local"
