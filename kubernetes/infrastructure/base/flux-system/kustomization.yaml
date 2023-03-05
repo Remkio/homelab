@@ -1,4 +1,4 @@
-resources: 
+resources:
   - customresourcedefinition.alerts.notification.toolkit.fluxcd.io.yaml
   - customresourcedefinition.buckets.source.toolkit.fluxcd.io.yaml
   - customresourcedefinition.gitrepositories.source.toolkit.fluxcd.io.yaml
