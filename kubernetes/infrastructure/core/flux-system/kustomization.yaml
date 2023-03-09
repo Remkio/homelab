@@ -5,6 +5,6 @@ resources:
   - kustomization.cluster.yaml
 
 configMapGenerator:
-- name: flux-config
-  literals:
-    - cluster-domain: "cluster.local"
+  - name: flux-config
+    literals:
+      - cluster-domain="cluster.local"
