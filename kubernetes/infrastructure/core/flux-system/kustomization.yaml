@@ -1,5 +1,5 @@
+namespace: flux-system
 resources:
-  - ../../base/namespace.flux-system.yaml
   - ../../base/flux-system
   - kustomization.infrastructure.yaml
   - kustomization.cluster.yaml
