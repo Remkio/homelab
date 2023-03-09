@@ -30,3 +30,4 @@ resources:
   - networkpolicy.allow-scraping.yaml
   - networkpolicy.allow-webhooks.yaml
   - gitrepository.homelab.yaml
+  - flux-monitoring

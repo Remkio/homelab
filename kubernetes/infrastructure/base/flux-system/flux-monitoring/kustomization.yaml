@@ -1,0 +1,4 @@
+resources:
+  - gitrepository.flux-monitoring.yaml
+  - kustomization.kube-prometheus-stack.yaml
+  - kustomization.flux-monitoring.yaml
