@@ -10,7 +10,7 @@ ports:
   - port: 8080:80
     nodeFilters:
       - loadbalancer
-  - port: 4443:443
+  - port: 8443:443
     nodeFilters:
       - loadbalancer
 volumes:
