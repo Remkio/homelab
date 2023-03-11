@@ -1,4 +1,3 @@
 resources:
   - helmrepository.traefik.yaml
   - helmrelease.traefik.yaml
-  - service.traefik-dashboard.yaml
