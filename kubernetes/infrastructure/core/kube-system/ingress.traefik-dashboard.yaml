@@ -9,7 +9,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /traefik-dashboard
+          - path: /traefik
             pathType: Prefix
             backend:
               service:
