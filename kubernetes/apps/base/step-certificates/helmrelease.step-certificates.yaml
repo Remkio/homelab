@@ -24,4 +24,8 @@ spec:
       configAsSecret: false
       sshHostCa: false
       sshUserCa: false
+    bootstrap:
+      enabled: false
+    inject:
+      enabled: false
   targetNamespace: step-certificates
