@@ -1,4 +1,0 @@
-resources:
-  - crd
-  - flux-system
-  - kube-system

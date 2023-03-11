@@ -1,3 +1,0 @@
-resources:
-  - ../../base/crd/fluxcd
-  - ../../base/crd/traefik

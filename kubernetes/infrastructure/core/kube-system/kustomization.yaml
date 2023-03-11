@@ -1,4 +1,0 @@
-resources:
-  - ../../base/kube-system
-  - secret.basicauth.sops.yaml
-  - ingressroute.traefik-dashboard.yaml
