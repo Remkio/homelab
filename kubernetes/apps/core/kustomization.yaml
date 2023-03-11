@@ -1,3 +1,4 @@
 ---
 resources:
+  - step-certificates
   - kustomization.step-certificates.yaml
