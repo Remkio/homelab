@@ -22,9 +22,6 @@ spec:
     podAnnotations:
       prometheus.io/port: "8082"
       prometheus.io/scrape: "true"
-    ports:
-      traefik:
-        expose: true
     providers:
       kubernetesIngress:
         publishedService:
