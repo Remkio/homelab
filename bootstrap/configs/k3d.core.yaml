@@ -1,0 +1,21 @@
+---
+apiVersion: k3d.io/v1alpha4
+kind: Simple
+metadata:
+  name: core
+servers: 1
+agents: 0
+image: docker.io/rancher/k3s:v1.25.6-k3s1
+volumes:
+  - volume: /etc/k3s-resolv.conf:/etc/resolv.conf
+    nodeFilters:
+      - server:*
+options:
+  k3s:
+    extraArgs:
+      - arg: --disable=traefik
+        nodeFilters:
+          - server:*
+      - arg: --kubelet-arg=feature-gates=KubeletInUserNamespace=true
+        nodeFilters:
+          - server:*
