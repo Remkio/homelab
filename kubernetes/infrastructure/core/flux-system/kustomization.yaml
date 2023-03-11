@@ -1,7 +1,6 @@
 namespace: flux-system
 resources:
   - ../../base/flux-system
-  - gitrepository.homelab.yaml
   - kustomization.infrastructure.yaml
   - kustomization.cluster.yaml
 

@@ -1,6 +1,5 @@
 resources:
   - namespace.flux-system.yaml
-  - ../crd/flux-system
   - serviceaccount.helm-controller.yaml
   - serviceaccount.kustomize-controller.yaml
   - serviceaccount.notification-controller.yaml
