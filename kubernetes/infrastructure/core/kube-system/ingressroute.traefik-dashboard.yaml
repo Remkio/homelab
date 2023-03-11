@@ -16,7 +16,7 @@ metadata:
   namespace: kube-system
 spec:
   routes:
-    - match: (PathPrefix(`/traefik/api`) || PathPrefix(`/traefik/dashboard`))
+    - match: (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
       kind: Rule
       services:
         - name: api@internal
