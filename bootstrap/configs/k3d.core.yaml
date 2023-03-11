@@ -6,6 +6,13 @@ metadata:
 servers: 1
 agents: 0
 image: docker.io/rancher/k3s:v1.25.6-k3s1
+ports:
+  - port: 8080:80
+    nodeFilters:
+      - loadbalancer
+  - port: 4443:443
+    nodeFilters:
+      - loadbalancer
 volumes:
   - volume: /etc/k3s-resolv.conf:/etc/resolv.conf
     nodeFilters:
