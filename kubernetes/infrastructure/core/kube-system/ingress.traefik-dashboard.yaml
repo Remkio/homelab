@@ -7,10 +7,9 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - host: traefik.${DOMAIN}
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /traefik-dashboard
             pathType: Prefix
             backend:
               service:
