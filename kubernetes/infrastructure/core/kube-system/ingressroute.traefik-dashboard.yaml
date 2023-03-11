@@ -1,5 +1,15 @@
 ---
 apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: basicauth
+  namespace: traefik
+spec:
+  basicAuth:
+    secret: basicauth
+    removeHeader: true
+---
+apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: traefik-dashboard
@@ -12,14 +22,4 @@ spec:
         - name: api@internal
           kind: TraefikService
       middlewares:
-        - name: strip-traefik-prefix
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: strip-traefik-prefix
-  namespace: kube-system
-spec:
-  stripPrefix:
-    prefixes:
-      - /traefik
+        - name: basicauth
