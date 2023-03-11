@@ -1,0 +1,4 @@
+---
+resources:
+  - helmrepository.smallstep.yaml
+  - helmrelease.step-certificates.yaml

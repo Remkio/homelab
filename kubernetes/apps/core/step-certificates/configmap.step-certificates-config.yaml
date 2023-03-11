@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: step-certificates-config
+  namespace: step-certificates
+data:
+  ca.json: |-
+    {
+      "root": "/home/step/certs/root_ca.crt",
+      "federatedRoots": null,
+      "crt": "/home/step/certs/intermediate_ca.crt",
+      "key": "/home/step/secrets/intermediate_ca_key",
+      "address": ":443",
+      "insecureAddress": "",
+      "dnsNames": [
+        "ca.molier.net",
+        "ca.home.molier.net",
+        "step-certificates.step-certificates.svc.core.k8s.local"
+      ],
+      "logger": {
+        "format": "text"
+      },
+      "db": {
+        "type": "badgerv2",
+        "dataSource": "/home/step/db",
+        "badgerFileLoadingMode": ""
+      },
+      "authority": {
+        "provisioners": [
+          {
+            "type": "JWK",
+            "name": "ca@molier.net",
+            "key": {
+              "use": "sig",
+              "kty": "EC",
+              "kid": "CDuL2kJXSE4pK74OWLSAkqNovPBqAHLGRbK41YBILUI",
+              "crv": "P-256",
+              "alg": "ES256",
+              "x": "M87ZkpSgEBfT2C1USE9xU3pBbUKVQLWwlfyuXh9JXtc",
+              "y": "Agkf7blSHtGIKhguwELTsw5Ey_ztfkJOIifWt8FBoQ4"
+            },
+            "encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjEwMDAwMCwicDJzIjoiSWpFWFgwc3htdTZQdGR1RzRWSFNGUSJ9.M8puAZZ1v0UrkMia7iHpYX0miH5qpgEtA1g9qwikCgSjXXaV4NCMIg.OfHT8Dt5XGMilHbM.Oa_GLjAkqoqUSmCIKQtPDu4rdh1Qz17vEcPlgLiJahY6Rq-7KrZ8d_lbqqCQKh-7sHLhbpXauvsfRLXGeSKE2CgVtvuWacuSPuvoEDrkwd8u-fzrQ6_RXYDLTeEs1xAzCSimd6sY2YVyW-MKCPRa4VvBafGxx2b_N0GGtfYn3QAiNKhdsXmXMnWksdGzIFFgkuUiJ1W8Ysa1vA7VJGQ53uWOZXmsfWuixOFr0WQidDT2ULtdx8nELglvjj2eMC5LT4A9ZzaD5m1s8KVqHEN0WPASyo9zv8tee7ZstDh3CcG9TUmtDaogk6JZg5xBZ6Ze6rHLPsRFGrxomNO99QQ.vW4MdnAz_pWiFOVyolriDw"
+          },
+          {
+            "type": "ACME",
+            "name": "acme"
+          }
+        ]
+      },
+      "tls": {
+        "cipherSuites": [
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+        ],
+        "minVersion": 1.2,
+        "maxVersion": 1.3,
+        "renegotiation": false
+      }
+    }
+  defaults.json: |-
+    {
+      "ca-url": "https://ca.molier.net",
+      "ca-config": "/home/step/config/ca.json",
+      "fingerprint": "b8c3952249860bddb435b007f0804e7cf4358a3669af58810b5c71af4ebedd9e",
+      "root": "/home/step/certs/root_ca.crt"
+    }

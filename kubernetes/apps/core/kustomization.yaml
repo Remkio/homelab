@@ -1,0 +1,3 @@
+---
+resources:
+  - kustomization.step-certificates.yaml

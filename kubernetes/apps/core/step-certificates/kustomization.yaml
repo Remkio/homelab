@@ -1,0 +1,8 @@
+---
+resources:
+  - namespace.step-certificates.yaml
+  - configmap.step-certificates-config.yaml
+  - configmap.step-certificates-certs.yaml
+  - secret.step-certificates-secrets.sops.yaml
+  - secret.step-certificates-ca-password.sops.yaml
+  - secret.step-certificates-provisioner-password.sops.yaml
