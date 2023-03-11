@@ -27,6 +27,7 @@ spec:
         publishedService:
           enabled: true
     priorityClassName: "system-cluster-critical"
+    rbac: false
     tolerations:
       - key: "CriticalAddonsOnly"
         operator: "Exists"
