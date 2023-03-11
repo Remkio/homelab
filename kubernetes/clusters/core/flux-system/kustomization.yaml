@@ -1,0 +1,32 @@
+---
+resources:
+  - namespace.flux-system.yaml
+  - customresourcedefinition.alerts.notification.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.buckets.source.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.gitrepositories.source.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.helmcharts.source.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.helmreleases.helm.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.helmrepositories.source.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.kustomizations.kustomize.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.ocirepositories.source.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.providers.notification.toolkit.fluxcd.io.yaml
+  - customresourcedefinition.receivers.notification.toolkit.fluxcd.io.yaml
+  - serviceaccount.helm-controller.yaml
+  - serviceaccount.kustomize-controller.yaml
+  - serviceaccount.notification-controller.yaml
+  - serviceaccount.source-controller.yaml
+  - clusterrole.crd-controller-flux-system.yaml
+  - clusterrole.flux-edit-flux-system.yaml
+  - clusterrole.flux-view-flux-system.yaml
+  - clusterrolebinding.cluster-reconciler-flux-system.yaml
+  - clusterrolebinding.crd-controller-flux-system.yaml
+  - service.notification-controller.yaml
+  - service.source-controller.yaml
+  - service.webhook-receiver.yaml
+  - deployment.helm-controller.yaml
+  - deployment.kustomize-controller.yaml
+  - deployment.notification-controller.yaml
+  - deployment.source-controller.yaml
+  - networkpolicy.allow-egress.yaml
+  - networkpolicy.allow-scraping.yaml
+  - networkpolicy.allow-webhooks.yaml

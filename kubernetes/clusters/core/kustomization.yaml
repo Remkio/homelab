@@ -1,0 +1,8 @@
+---
+resources:
+  - flux-system
+  - secret.flux-system.sops.yaml
+  - gitrepository.flux-system.yaml
+  - kustomization.cluster.yaml
+  - kustomization.infrastructure.yaml
+  - kustomization.apps.yaml
