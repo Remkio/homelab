@@ -20,6 +20,9 @@ volumes:
 options:
   k3s:
     extraArgs:
+      - arg: --cluster-domain=core.k8s.local
+        nodeFilters:
+          - server:*
       - arg: --disable=traefik
         nodeFilters:
           - server:*

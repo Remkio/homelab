@@ -6,10 +6,11 @@
 
 create: /etc/k3s-resolv.conf
 	k3d cluster create -c ./configs/k3d.core.yaml
-	kubectl apply -f ../kubernetes/infrastructure/base/flux-system/namespace.flux-system.yaml
-	kubectl create secret generic --namespace flux-system sops-keys -o yaml --from-file=age.agekey=../secrets/age-key.txt
-	kubectl apply -k ../kubernetes/infrastructure/core/crd
-	kubectl apply -k ../kubernetes/infrastructure/core
+	kubectl create namespace flux-system
+	kubectl create secret generic --namespace flux-system flux-system -o yaml --from-file=age.agekey=../secrets/age-key.txt
+	kubectl apply -k ../kubernetes/clusters/core/flux-system
+	kubectl apply -f ../kubernetes/clusters/core/gitrepository.flux-system.yaml
+	kubectl apply -f ../kubernetes/clusters/core/kustomization.cluster.yaml
 
 delete:
 	k3d cluster delete core
