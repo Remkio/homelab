@@ -1,3 +1,4 @@
 resources:
   - ../../base/kube-system
-  - ingress.traefik-dashboard.yaml
+  - middleware.strip-traefik-prefix.yaml
+  - ingressroute.traefik-dashboard.yaml
