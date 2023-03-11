@@ -1,15 +1,6 @@
 resources:
   - namespace.flux-system.yaml
-  - customresourcedefinition.alerts.notification.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.buckets.source.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.gitrepositories.source.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.helmcharts.source.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.helmreleases.helm.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.helmrepositories.source.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.kustomizations.kustomize.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.ocirepositories.source.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.providers.notification.toolkit.fluxcd.io.yaml
-  - customresourcedefinition.receivers.notification.toolkit.fluxcd.io.yaml
+  - ../crd/flux-system
   - serviceaccount.helm-controller.yaml
   - serviceaccount.kustomize-controller.yaml
   - serviceaccount.notification-controller.yaml
@@ -30,4 +21,3 @@ resources:
   - networkpolicy.allow-scraping.yaml
   - networkpolicy.allow-webhooks.yaml
   - gitrepository.homelab.yaml
-  - flux-monitoring
