@@ -15,7 +15,6 @@ spec:
         name: prometheus-community
   install:
     crds: Create
-    createNamespace: true
   interval: 2h0m0s
   postRenderers:
     - kustomize:
@@ -35,7 +34,7 @@ spec:
               - op: add
                 path: /metadata/annotations/helm.toolkit.fluxcd.io~1driftDetection
                 value: disabled
-  targetNamespace: kube-prometheus-stack
+  targetNamespace: monitoring
   upgrade:
     crds: CreateReplace
   values:

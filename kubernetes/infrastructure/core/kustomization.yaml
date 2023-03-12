@@ -1,4 +1,5 @@
 ---
 resources:
+  - ../../base/monitoring/namespace.monitoring.yaml
   - kustomization.kube-prometheus-stack.yaml
   - kustomization.traefik.yaml

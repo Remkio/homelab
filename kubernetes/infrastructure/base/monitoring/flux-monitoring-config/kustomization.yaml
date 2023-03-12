@@ -1,0 +1,4 @@
+---
+resources:
+  - gitrepository.flux-monitoring.yaml
+  - kustomization.monitoring-config.yaml
