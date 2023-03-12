@@ -1,3 +1,4 @@
 ---
 resources:
+  - kustomization.kube-prometheus-stack.yaml
   - kustomization.traefik.yaml

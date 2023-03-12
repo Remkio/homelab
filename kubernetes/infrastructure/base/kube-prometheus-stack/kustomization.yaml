@@ -1,0 +1,4 @@
+---
+resources:
+  - helmrepository.prometheus-community.yaml
+  - helmrelease.kube-prometheus-stack.yaml
