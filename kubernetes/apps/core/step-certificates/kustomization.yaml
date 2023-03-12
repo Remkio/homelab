@@ -6,3 +6,4 @@ resources:
   - secret.step-certificates-step-certificates-secrets.sops.yaml
   - secret.step-certificates-step-certificates-ca-password.sops.yaml
   - secret.step-certificates-step-certificates-provisioner-password.sops.yaml
+  - ../../base/step-certificates

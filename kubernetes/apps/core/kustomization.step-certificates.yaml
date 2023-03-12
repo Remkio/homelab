@@ -10,7 +10,7 @@ spec:
     secretRef:
       name: flux-system
   interval: 5m0s
-  path: ./kubernetes/apps/base/step-certificates
+  path: ./kubernetes/apps/core/step-certificates
   prune: true
   sourceRef:
     kind: GitRepository
