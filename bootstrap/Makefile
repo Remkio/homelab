@@ -3,7 +3,6 @@
 /etc/k3s-resolv.conf:
 	echo "nameserver 10.1.0.1" | sudo tee /etc/k3s-resolv.conf
 
-
 create: /etc/k3s-resolv.conf
 	k3d cluster create -c ./configs/k3d.core.yaml
 	kubectl create namespace flux-system
