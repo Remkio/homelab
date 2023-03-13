@@ -11,7 +11,7 @@ data:
       "federatedRoots": null,
       "crt": "/home/step/certs/intermediate_ca.crt",
       "key": "/home/step/secrets/intermediate_ca_key",
-      "address": ":443",
+      "address": ":9000",
       "insecureAddress": "",
       "dnsNames": [
         "step-certificates.step-certificates.svc.core.k8s.local"
