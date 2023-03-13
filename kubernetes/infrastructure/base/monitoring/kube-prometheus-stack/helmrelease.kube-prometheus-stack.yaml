@@ -40,6 +40,8 @@ spec:
   values:
     alertmanager:
       enabled: false
+    nodeExporter:
+      hostRootfs: false
     prometheus:
       prometheusSpec:
         retention: 24h
