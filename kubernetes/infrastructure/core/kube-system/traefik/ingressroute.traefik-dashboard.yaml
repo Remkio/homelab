@@ -6,10 +6,10 @@ metadata:
   namespace: kube-system
 spec:
   routes:
-  - match: Host(`traefik.core.k8s.local`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
-    kind: Rule
-    services:
-    - name: api@internal
-      kind: TraefikService
-    middlewares:
-      - name: auth
+    - match: Host(`traefik.core.k8s.local`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService
+      middlewares:
+        - name: traefik-auth
