@@ -1,0 +1,5 @@
+---
+resources:
+  - ../../../base/monitoring/kube-prometheus-stack
+patchesStrategicMerge:
+  - helmrelease.kube-prometheus-stack.patch.yaml

@@ -15,7 +15,7 @@ spec:
       name: kube-prometheus-stack
       namespace: flux-system
   interval: 5m0s
-  path: ./kubernetes/infrastructure/base/monitoring/kube-prometheus-stack
+  path: ./kubernetes/infrastructure/core/monitoring/kube-prometheus-stack
   prune: true
   sourceRef:
     kind: GitRepository

@@ -1,0 +1,23 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: flux-system
+spec:
+  values:
+    grafana:
+      # username is 'admin'
+      adminPassword: prom-operator
+      ingress:
+        enabled: true
+        hosts: ['grafana.core.k8s.local']
+        path: "/"
+    prometheus:
+      ingress:
+        enabled: true
+        hosts: ['prometheus.core.k8s.local']
+        paths: ['/']
+      prometheusSpec:
+        externalUrl: "https://prometheus.core.k8s.local/"
+        routePrefix: /
