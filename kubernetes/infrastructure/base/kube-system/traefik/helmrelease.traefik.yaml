@@ -16,6 +16,7 @@ spec:
   install:
     crds: Create
   interval: 2h0m0s
+  releaseName: traefik
   targetNamespace: kube-system
   values:
     podAnnotations:

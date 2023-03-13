@@ -34,6 +34,7 @@ spec:
               - op: add
                 path: /metadata/annotations/helm.toolkit.fluxcd.io~1driftDetection
                 value: disabled
+  releaseName: kube-prometheus-stack
   targetNamespace: monitoring
   upgrade:
     crds: CreateReplace
