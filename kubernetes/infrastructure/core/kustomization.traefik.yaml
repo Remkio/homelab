@@ -17,7 +17,7 @@ spec:
       name: traefik
       namespace: flux-system
   interval: 5m0s
-  path: ./kubernetes/infrastructure/base/kube-system/traefik
+  path: ./kubernetes/infrastructure/core/kube-system/traefik
   prune: true
   sourceRef:
     kind: GitRepository
