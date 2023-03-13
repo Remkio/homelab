@@ -1,6 +1,5 @@
 ---
 resources:
-  - ../../../base/kube-system/traefik
   - secret.traefik-auth.sops.yaml
   - middleware.traefik-auth.yaml
   - ingressroute.traefik-dashboard.yaml
