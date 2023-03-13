@@ -14,8 +14,6 @@ data:
       "address": ":443",
       "insecureAddress": "",
       "dnsNames": [
-        "ca.molier.net",
-        "ca.home.molier.net",
         "step-certificates.step-certificates.svc.core.k8s.local"
       ],
       "logger": {

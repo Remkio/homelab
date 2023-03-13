@@ -6,6 +6,9 @@ metadata:
   namespace: flux-system
 spec:
   values:
+    ca:
+      env:
+        - STEP_DEBUG=1
     ingress:
       enabled: true
       hosts:
