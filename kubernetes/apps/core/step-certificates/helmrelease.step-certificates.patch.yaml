@@ -10,8 +10,8 @@ spec:
       enabled: true
       hosts:
         - host: "ca.molier.net"
-          path: "/"
+          paths: ["/"]
         - host: "ca.home.molier.net"
-          path: "/"
+          paths: ["/"]
         - host: "ca.core.k8s.local"
-          path: "/"
+          paths: ["/"]
