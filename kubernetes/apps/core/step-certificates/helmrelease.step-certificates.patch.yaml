@@ -8,7 +8,4 @@ spec:
   values:
     ingress:
       enabled: true
-      hosts:
-        - "ca.molier.net"
-        - "ca.home.molier.net"
-        - "ca.core.k8s.local"
+      hosts: ["ca.molier.net", "ca.home.molier.net", "ca.core.k8s.local"]
