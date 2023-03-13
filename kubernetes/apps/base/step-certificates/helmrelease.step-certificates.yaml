@@ -16,6 +16,8 @@ spec:
   install:
     createNamespace: true
   interval: 2h0m0s
+  releaseName: step-certificates
+  targetNamespace: step-certificates
   values:
     existingSecrets:
       enabled: true
@@ -29,4 +31,3 @@ spec:
       configmaps: false
     inject:
       enabled: false
-  targetNamespace: step-certificates

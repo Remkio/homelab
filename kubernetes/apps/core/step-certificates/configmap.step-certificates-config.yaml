@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: step-certificates-step-certificates-config
+  name: step-certificates-config
   namespace: step-certificates
 data:
   ca.json: |-

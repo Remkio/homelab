@@ -1,11 +1,11 @@
 ---
 resources:
   - namespace.step-certificates.yaml
-  - configmap.step-certificates-step-certificates-config.yaml
-  - configmap.step-certificates-step-certificates-certs.yaml
-  - secret.step-certificates-step-certificates-secrets.sops.yaml
-  - secret.step-certificates-step-certificates-ca-password.sops.yaml
-  - secret.step-certificates-step-certificates-provisioner-password.sops.yaml
+  - configmap.step-certificates-config.yaml
+  - configmap.step-certificates-certs.yaml
+  - secret.step-certificates-secrets.sops.yaml
+  - secret.step-certificates-ca-password.sops.yaml
+  - secret.step-certificates-provisioner-password.sops.yaml
   - ../../base/step-certificates
 patchesStrategicMerge:
   - helmrelease.step-certificates.patch.yaml
