@@ -8,7 +8,8 @@ spec:
   values:
     ca:
       env:
-        - STEP_DEBUG=1
+        - name: STEPDEBUG
+          value: 1
     ingress:
       enabled: true
       hosts:
