@@ -2,6 +2,7 @@
 resources:
   - ../base/monitoring/namespace.monitoring.yaml
   - kustomization.kube-prometheus-stack.yaml
+  - kustomization.step-certificates.yaml
   - kustomization.traefik.yaml
   - kustomization.traefik-external-dashboard.yaml
   - kustomization.flux-monitoring-config.yaml

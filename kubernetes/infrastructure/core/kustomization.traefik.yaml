@@ -11,13 +11,14 @@ spec:
       name: flux-system
   dependsOn:
     - name: kube-prometheus-stack
+    - name: step-certificates
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
       kind: HelmRelease
       name: traefik
       namespace: flux-system
   interval: 5m0s
-  path: ./kubernetes/infrastructure/base/kube-system/traefik
+  path: ./kubernetes/infrastructure/core/kube-system/traefik
   prune: true
   sourceRef:
     kind: GitRepository

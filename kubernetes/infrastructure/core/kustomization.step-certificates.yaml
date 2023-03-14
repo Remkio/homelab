@@ -15,7 +15,7 @@ spec:
       name: step-certificates
       namespace: flux-system
   interval: 5m0s
-  path: ./kubernetes/apps/core/step-certificates
+  path: ./kubernetes/infrastructure/core/step-certificates
   prune: true
   sourceRef:
     kind: GitRepository
