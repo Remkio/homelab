@@ -19,6 +19,9 @@ spec:
   releaseName: traefik
   targetNamespace: kube-system
   values:
+    logs:
+      general:
+        level: "DEBUG"
     podAnnotations:
       prometheus.io/port: "8082"
       prometheus.io/scrape: "true"
