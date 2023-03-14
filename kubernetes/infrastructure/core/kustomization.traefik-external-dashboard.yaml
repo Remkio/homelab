@@ -12,7 +12,7 @@ spec:
   dependsOn:
     - name: traefik
   interval: 5m0s
-  path: ./kubernetes/infrastructure/core/kube-system/traefik-dashboard
+  path: ./kubernetes/infrastructure/core/kube-system/traefik-external-dashboard
   prune: true
   sourceRef:
     kind: GitRepository
