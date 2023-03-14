@@ -8,7 +8,7 @@ spec:
   values:
     volumes:
       - name: traefik-public-certs
-        mounthPath: "/certs"
+        mountPath: "/certs"
         type: configMap
     additionalArguments:
       - "--serversTransport.rootCAs=/certs/step_ca.crt"
