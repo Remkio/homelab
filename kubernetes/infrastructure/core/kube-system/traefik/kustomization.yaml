@@ -1,6 +1,6 @@
 ---
 resources:
-  - configmap.public-certs.yaml
+  - configmap.traefik-public-certs.yaml
   - ../../../base/kube-system/traefik
 patchesStrategicMerge:
   - helmrelease.traefik.patch.yaml
